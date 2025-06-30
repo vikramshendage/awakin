@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>PDF Buttons & Love Animation</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding-top: 80px;
+        background-color: #fdf6f9;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 15px 30px;
+        font-size: 18px;
+        margin: 20px;
+        cursor: pointer;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn:hover {
+        background-color: #45a049;
+      }
+
+      .heart-btn {
+        background-color: #e91e63;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        font-size: 20px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s;
+      }
+
+      .heart-btn:hover {
+        transform: scale(1.1);
+      }
+
+      #love-message {
+        display: none;
+        font-size: 32px;
+        color: #ff1493;
+        margin-top: 30px;
+        animation: fadeInUp 2s ease-in-out forwards;
+      }
+
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Download Your PDF Files</h1>
+
+    <a href="Principle Management.pdf" class="btn" target="_blank"
+      >Principle Management</a
+    >
+    <a href="basket ball.pdf" class="btn" target="_blank">Basketball</a>
+
+    <br /><br />
+
+    <button class="heart-btn" onclick="showLove()">Click me</button>
+
+    <div id="love-message">I love you baby forever 💖</div>
+
+    <script>
+      function showLove() {
+        const msg = document.getElementById("love-message");
+        msg.style.display = "block";
+      }
+    </script>
+  </body>
+</html>
